@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | ML Collective</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <script defer src="js/cart.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ML Collective Logo">
+        </div>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="catalog.html">CATALOG</a></li>
+                <li><a href="contact.html">CONNECT WITH US</a></li>
+                <li><a href="story.html">OUR STORY</a></li>
+            </ul>
+            <ul class="mobile-menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="catalog.html">CATALOG</a></li>
+                <li><a href="contact.html">CONNECT WITH US</a></li>
+                <li><a href="story.html">OUR STORY</a></li>
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <a href="cart.html">
+                <img class="cart-icon" src="images/cart-icon.png" alt="Cart Icon">
+                <span id="cart-count" class="cart-count">0</span> <!-- Cart count will show here -->
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+
+    <section class="checkout">
+        <h1>Checkout</h1>
+
+        <!-- Customer Info Form -->
+        <form id="customer-form">
+            <label for="customer-name">First Name:</label>
+            <input type="text" id="customer-name" name="customer-name" required>
+
+            <label for="customer-surname">Last Name:</label>
+            <input type="text" id="customer-surname" name="customer-surname" required>
+
+            <label for="customer-phone">Phone Number:</label>
+            <input type="tel" id="customer-phone" name="customer-phone" required>
+
+            <label for="customer-address">Address:</label>
+            <input type="text" id="customer-address" name="customer-address" required>
+
+            <button type="submit" id="proceed-order">Proceed to Order</button>
+        </form>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="cart-total">
+                <p>Total: R<span id="cart-total">0.00</span></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ML Collective. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

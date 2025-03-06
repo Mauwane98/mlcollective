@@ -1,0 +1,319 @@
+/* General layout settings */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #000000;
+}
+
+/* Cart icon positioning */
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    width: 30px; /* Adjust size */
+    height: auto;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    width: 140px;  /* Adjusted logo size */
+    height: auto;   /* Maintain aspect ratio */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+/* Mobile Menu Styles */
+nav ul.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    gap: 15px;
+}
+
+nav ul.mobile-menu li a {
+    font-weight: 600;
+    color: black;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* Show mobile menu when clicked */
+.mobile-menu.show {
+    display: flex;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav ul.desktop-menu {
+        display: none;
+    }
+
+    nav ul.mobile-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Store and Product Styles */
+.store {
+    padding: 40px;
+    text-align: center;
+}
+
+.store-title {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.store-description {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Product container style */
+.product {
+    position: relative;
+    width: 250px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Coming Soon Styling */
+.coming-soon .price,
+.coming-soon .product-options,
+.coming-soon .add-to-cart {
+    display: none;
+}
+
+.coming-soon .pre-order {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.coming-soon .pre-order:hover {
+    background-color: #e05c50;
+}
+
+.coming-soon-label {
+    background-color: #ff9900;
+    color: white;
+    padding: 5px 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Sold Out product styling */
+.sold-out {
+    opacity: 0.6;
+}
+
+.sold-out-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff3333;
+    color: white;
+    padding: 5px 10px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+/* Product image styling */
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Price styling */
+.price {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* Product options styling */
+.product-options {
+    margin: 10px 0;
+}
+
+.product-options select, .product-options input {
+    padding: 8px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Add to cart button styling */
+.add-to-cart {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #333;
+}
+
+/* Floating icons */
+.floating-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.floating-icons a {
+    display: block;
+}
+
+.floating-icons i {
+    font-size: 50px;
+    color: #000;
+    transition: transform 0.3s ease;
+}
+
+.floating-icons i:hover {
+    transform: scale(1.1);
+}
+
+/* WhatsApp Icon */
+.fab.fa-whatsapp {
+    color: #25D366;
+}
+
+/* Call Icon */
+.fas.fa-phone-alt {
+    color: #34b7f1;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 2px solid #ccc;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-links, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.footer-contact p {
+    font-size: 16px;
+    margin: 5px 0;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ML Collective Store</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/cart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ML Collective Logo">
+        </div>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="catalog.html">CATALOG</a></li>
+                <li><a href="contact.html">CONNECT WITH US</a></li>
+                <li><a href="story.html">OUR STORY</a></li>
+            </ul>
+            <ul class="mobile-menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="catalog.html">CATALOG</a></li>
+                <li><a href="contact.html">CONNECT WITH US</a></li>
+                <li><a href="story.html">OUR STORY</a></li>
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <a href="cart.html">
+                <img class="cart-icon" src="images/cart-icon.png" alt="Cart Icon">
+                <span id="cart-count" class="cart-count">0</span> <!-- Cart count will show here -->
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+
+    <section class="contact-us">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need assistance, feel free to reach out to us. We're here to help!</p>
+
+        <!-- Contact Form -->
+        <form action="send-message.php" method="POST" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Write your message here"></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h3>Our Contact Details:</h3>
+            <p><strong>Email:</strong> <a href="mailto:info@mlcollective.com">info@mlcollective.com</a></p>
+            <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 ML Collective Street, City, Country</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ML Collective. All Rights Reserved.</p>
+        </div>
+    </footer>    
+
+    <div class="floating-icons">
+        <a href="https://wa.me/yourwhatsappnumber" target="_blank"><i class="fab fa-whatsapp whatsapp"></i></a>
+        <a href="tel:+1234567890"><i class="fas fa-phone-alt call"></i></a>
+    </div>
+</body>
+</html>

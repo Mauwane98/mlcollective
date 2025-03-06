@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - ML Collective Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cart.css"> <!-- Cart page styles if needed -->
+    <script defer src="js/script.js"></script>
+    <script defer src="js/cart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="ML Collective Logo">
+        </div>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="catalog.html">CATALOG</a></li>
+                <li><a href="contact.html">CONNECT WITH US</a></li>
+                <li><a href="story.html">OUR STORY</a></li>
+            </ul>
+            <ul class="mobile-menu">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="catalog.html">CATALOG</a></li>
+                <li><a href="contact.html">CONNECT WITH US</a></li>
+                <li><a href="story.html">OUR STORY</a></li>
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <a href="cart.html">
+                <img class="cart-icon" src="images/cart-icon.png" alt="Cart Icon">
+                <span id="cart-count" class="cart-count">0</span> <!-- Cart count will show here -->
+            </a>
+        </div>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </header>
+
+
+    <section class="catalog">
+        <h1 class="catalog-title">ML Collective Catalog</h1>
+        <p class="catalog-description">Explore our unique collection of handcrafted leather products.</p>
+
+        <div class="product-grid">
+            <!-- Sample Products for Catalog -->
+            
+           
+            <!-- ML Leather Belt -->
+<div class="product" id="product-2">
+    <img src="images/ML_BELT.png" alt="ML Leather Belt">
+    <h3>ML Leather Belt</h3>
+    <span class="price">R100.00</span>
+
+    <div class="product-options">
+        <label for="waist-size-2">Waist Size (Fits 26-42):</label>
+        <select id="waist-size-2">
+            <option value="26-30">26-30</option>
+            <option value="31-35">31-35</option>
+            <option value="36-40">36-40</option>
+            <option value="41-42">41-42</option>
+        </select>
+    </div>
+
+    <div class="product-options">
+        <label for="color-2">Color:</label>
+        <select id="color-2">
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="dark-brown">Dark Brown</option>
+        </select>
+    </div>
+
+    <div class="product-options">
+        <label for="engraving-2">Personalize (Engraving, optional):</label>
+        <input type="text" id="engraving-2" placeholder="Enter engraving text (optional)">
+    </div>
+
+    <button class="add-to-cart" onclick="addToCart('product-2')">Add to Cart</button>
+</div>
+
+
+            <!-- ML Leather Bracelet -->
+<div class="product" id="product-3">
+    <img src="images/ML_BRACELET.png" alt="ML Leather Bracelet">
+    <h3>ML Leather Bracelet</h3>
+    <span class="price">R80.00</span>
+
+    <div class="product-options">
+        <label for="bracelet-size-3">Size:</label>
+        <select id="bracelet-size-3">
+            <option value="S">Small (15-17cm)</option>
+            <option value="M">Medium (18-20cm)</option>
+            <option value="L">Large (21-23cm)</option>
+        </select>
+    </div>
+
+    <div class="product-options">
+        <label for="color-3">Color:</label>
+        <select id="color-3">
+            <option value="black">Black</option>
+            <option value="brown">Brown</option>
+            <option value="dark-brown">Dark Brown</option>
+        </select>
+    </div>
+
+    <div class="product-options">
+        <label for="engraving-3">Personalize (Engraving, optional):</label>
+        <input type="text" id="engraving-3" placeholder="Enter engraving text (optional)">
+    </div>
+
+    <button class="add-to-cart" onclick="addToCart('product-3')">Add to Cart</button>
+</div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ML Collective. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+
+    <div class="floating-icons">
+        <a href="https://wa.me/yourwhatsappnumber" target="_blank"><i class="fab fa-whatsapp whatsapp"></i></a>
+        <a href="tel:+1234567890"><i class="fas fa-phone-alt call"></i></a>
+    </div>
+</body>
+</html>
